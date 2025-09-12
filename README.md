@@ -2,7 +2,7 @@
 
 This repository provides the official PyTorch implementation of the research paper:
 
- [LLM-Guided Semantic Relational Reasoning for Multimodal Intent Recognition] (**Accepted by [EMNLP2025 Main Track]**). 
+ [LLM-Guided Semantic Relational Reasoning for Multimodal Intent Recognition](https://arxiv.org/abs/2509.01337) (**Accepted by [EMNLP2025 Main Track]**). 
 
 ## 1.Introduction
 
@@ -59,11 +59,14 @@ The overview model architecture:
 If you are insterested in this work, and want to use the codes or results in this repository, please **star** this repository and **cite** by:
 
 ```
-@article{zhou2025lgsrr,
+@misc{zhou2025llmguidedsemanticrelationalreasoning,
       title={LLM-Guided Semantic Relational Reasoning for Multimodal Intent Recognition}, 
       author={Qianrui Zhou and Hua Xu and Yifan Wang and Xinzhi Dong and Hanlei Zhang},
       year={2025},
-      booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing}
+      eprint={2509.01337},
+      archivePrefix={arXiv},
+      primaryClass={cs.MM},
+      url={https://arxiv.org/abs/2509.01337}, 
 }
 ```
 
