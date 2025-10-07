@@ -30,7 +30,7 @@ class ModelManager:
     def __init__(self, args):
         
         self.logger = logging.getLogger(args.logger_name)
-        self.device = args.device = torch.device('cuda:%d' % int(args.gpu_id) if torch.cuda.is_available() else 'cpu')        
+        self.device = args.device = torch.device('cuda:%d' % int(args.gpu_id.split(',')[0]) if torch.cuda.is_available() else 'cpu')        
 
     def _set_model(self, args):
         model = MIA(args) 
