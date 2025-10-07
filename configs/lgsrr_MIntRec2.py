@@ -24,7 +24,7 @@ class Param():
             
             hyper_parameters = {
                 'eval_monitor': ['f1'],
-                'train_batch_size': [32],
+                'train_batch_size': [16],
                 'eval_batch_size': 8,
                 'test_batch_size': 8,
                 'wait_patience': [5],
