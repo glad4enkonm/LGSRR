@@ -15,6 +15,7 @@ We use anaconda to create python environment and install required libraries:
 ```
 cd LGSRR
 conda create --name lgsrr python=3.9
+conda activate lgsrr
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
@@ -32,7 +33,7 @@ You can evaluate the performance of our proposed LGSRR on [MIntRec2.0](https://p
 - MIntRec2.0
 
 ```
-sh examples/run_lgsrr_MIntRec2.0.sh
+sh examples/run_lgsrr_MIntRec2.sh
 ```
 
 - IEMOCAP-DA
