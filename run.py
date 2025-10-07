@@ -154,6 +154,7 @@ if __name__ == '__main__':
     
     warnings.filterwarnings('ignore')   
     args = parse_arguments() 
+    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id    
     logger = set_logger(args)  
     os.environ["TOKENIZERS_PARALLELISM"] = "false"  
     param = ParamManager(args)

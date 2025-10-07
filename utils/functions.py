@@ -91,8 +91,15 @@ def save_model(model, model_dir):
 
 def restore_model(model, model_dir, device):
     output_model_file = os.path.join(model_dir, 'pytorch_model.bin')
-    m = torch.load(output_model_file, map_location=device)
-    model.load_state_dict(m, strict=False)
+    state_dict = torch.load(output_model_file, map_location=device)
+    # create new OrderedDict that does not contain `module.`
+    from collections import OrderedDict
+    new_state_dict = OrderedDict()
+    for k, v in state_dict.items():
+        name = k.replace('module.', '') # remove `module.`
+        new_state_dict[name] = v
+    # load params
+    model.load_state_dict(new_state_dict, strict=False)
     return model
 
 def save_results(args, test_results, debug_args = None):

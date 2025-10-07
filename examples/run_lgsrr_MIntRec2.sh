@@ -16,7 +16,7 @@ run_third_script() {
                 --method ${method} \
                 --train \
                 --save_results \
-                --gpu_id '2' \
+                --gpu_id '0,1' \
                 --text_backbone $text_backbone \
                 --config_file_name ${method}_MIntRec2 \
                 --results_file_name "results_mintrec2_${method}.csv"

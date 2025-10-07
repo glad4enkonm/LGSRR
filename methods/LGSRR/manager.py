@@ -20,6 +20,8 @@ class LGSRR:
         self.logger = logging.getLogger(args.logger_name)
         self.device, self.model = model.device, model._set_model(args)
         self.model.to(self.device)
+        if torch.cuda.device_count() > 1:
+            self.model = nn.DataParallel(self.model)        
         self.optimizer, self.scheduler = self._set_optimizer(args, self.model)
 
         mm_data = data.data
